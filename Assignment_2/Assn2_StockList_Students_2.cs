@@ -26,6 +26,8 @@ namespace Assignment_2
                 nodeToMerge = nodeToMerge.Next;
             }
 
+            currentStockList.SortByName();
+
             resultList = currentStockList;
 
             return resultList;
