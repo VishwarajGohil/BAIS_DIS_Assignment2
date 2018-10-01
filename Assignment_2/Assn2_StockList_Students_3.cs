@@ -19,7 +19,7 @@ namespace Assignment_2
 
             if (current.Next == null)
             {
-                //To Get the value of portfolio that is value of each stock multiplied by the number of holdings
+                //To Get the value of portfolio that is value of each stock multiplied by the number of holdings.
                 value = current.StockHolding.Holdings * current.StockHolding.CurrentPrice;
             }
             else

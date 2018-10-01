@@ -43,6 +43,7 @@ namespace Assignment_2
             //Loop To check if the list is empty.
             if (this.head == null)
             {
+                //To Print Empty List
                 Console.WriteLine("****************Empty List***************");
                 return mostShareStock;
             }

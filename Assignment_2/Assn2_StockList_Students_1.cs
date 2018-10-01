@@ -281,7 +281,7 @@ namespace Assignment_2
             {
                 while (rightNode != null)
                 {
-                    //To Compare the names of the the left and right node 
+                    //To Compare the names of the the left and right node.
                     if (leftNode.StockHolding.Name.CompareTo(rightNode.StockHolding.Name) > 0)
                     {
                         tempLeftNode = leftNode;
