@@ -19,6 +19,7 @@ namespace Assignment_2
 
             if (current.Next == null)
             {
+                //To Get the value of portfolio that is value of each stock multiplied by the number of holdings
                 value = current.StockHolding.Holdings * current.StockHolding.CurrentPrice;
             }
             else
@@ -48,7 +49,7 @@ namespace Assignment_2
                 StockNode current1 = listToCompare.head;
                 while (current1 != null)
                 {
-
+                    //To Compare the list of Stock of both the lists 
                     if (current.StockHolding.Name == current1.StockHolding.Name)
                     {
 
@@ -78,7 +79,7 @@ namespace Assignment_2
                 StockNode current = this.head;
 
                 int counter = 1;
-
+                //Loop to print Symbol,Name,Holdings,Current Price
                 while (current != null)
                 {
                     Console.WriteLine("****************Node number: " + counter + "***************");

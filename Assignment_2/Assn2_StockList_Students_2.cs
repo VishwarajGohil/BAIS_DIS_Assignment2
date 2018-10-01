@@ -38,7 +38,7 @@ namespace Assignment_2
         public Stock MostShares()
         {
             Stock mostShareStock = null;
-
+            //Loop To check if the list is empty.
             if (this.head == null)
             {
                 Console.WriteLine("****************Empty List***************");
@@ -48,7 +48,7 @@ namespace Assignment_2
             {
                 StockNode current = this.head;
                 mostShareStock = current.StockHolding;
-
+                //To Check if value at next node is null
                 if (current.Next == null)
                 {
                     return mostShareStock;
@@ -57,6 +57,7 @@ namespace Assignment_2
                 {
                     while (current != null)
                     {
+                        //To Compare The stock's value
                         if (current.StockHolding.Holdings > mostShareStock.Holdings)
                         {
                             mostShareStock = current.StockHolding;
@@ -77,7 +78,7 @@ namespace Assignment_2
         public int Length()
         {
             int length = 0;
-
+            //To check if the list is empty
             if (this.head == null)
             {
                 return length;
@@ -85,7 +86,7 @@ namespace Assignment_2
             else
             {
                 StockNode current = this.head;
-
+                //To Calculate the length of list
                 do
                 {
                     current = current.Next;

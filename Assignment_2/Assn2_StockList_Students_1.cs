@@ -229,35 +229,18 @@ namespace Assignment_2
         //return type  : NA
         public void SortByValue()
         {
+            //To find the length of the StockList
             int listLength = this.Length();
             StockNode leftNode = this.head;
+            //To Store the value of nodes in temporary nodes 
             StockNode rightNode, tempLeftNode, tempRightNode;
             rightNode = leftNode.Next;
-
-
-            //while (leftNode != null)
-            //{
-            //    rightNode = leftNode.Next;
-            //    while (rightNode!=null)
-            //    {
-            //        if(leftNode.StockHolding.Holdings < rightNode.StockHolding.Holdings)
-            //        {
-            //            tempLeftNode = leftNode;
-            //            tempRightNode = rightNode;
-            //            this.Swap(leftNode.StockHolding);
-            //            rightNode = tempLeftNode;
-            //            leftNode = tempRightNode;
-            //        }
-            //        rightNode = rightNode.Next;
-            //    }
-
-            //    leftNode = leftNode.Next;
-            //}
 
             for (int i = 0; i < listLength; i++)
             {
                 while (rightNode != null)
                 {
+                    //Loop to compare the value of Holdings of left and right node
                     if (leftNode.StockHolding.Holdings < rightNode.StockHolding.Holdings)
                     {
                         tempLeftNode = leftNode;
@@ -287,8 +270,10 @@ namespace Assignment_2
         //return type  : NA
         public void SortByName()
         {
+            //To find the length of the StockList
             int listLength = this.Length();
             StockNode leftNode = this.head;
+            //To Store the value of nodes in temporary nodes 
             StockNode rightNode, tempLeftNode, tempRightNode;
             rightNode = leftNode.Next;
 
@@ -296,6 +281,7 @@ namespace Assignment_2
             {
                 while (rightNode != null)
                 {
+                    //To Compare the names of the the left and right node 
                     if (leftNode.StockHolding.Name.CompareTo(rightNode.StockHolding.Name) > 0)
                     {
                         tempLeftNode = leftNode;
