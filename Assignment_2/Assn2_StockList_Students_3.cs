@@ -15,6 +15,21 @@ namespace Assignment_2
             decimal value = 0.0m;
 
             // write your implementation here
+            StockNode current = this.head;
+
+            if (current.Next == null)
+            {
+                value = current.StockHolding.Holdings * current.StockHolding.CurrentPrice;
+            }
+            else
+            {
+                while (current != null)
+                {
+                    value += current.StockHolding.Holdings * current.StockHolding.CurrentPrice;
+                    current = current.Next;
+                }
+
+            }
 
             return value;
         }
@@ -27,7 +42,23 @@ namespace Assignment_2
         {
             int similarityIndex = 0;
 
-            // write your implementation here
+            StockNode current = this.head;
+            while (current != null)
+            {
+                StockNode current1 = listToCompare.head;
+                while (current1 != null)
+                {
+
+                    if (current.StockHolding.Name == current1.StockHolding.Name)
+                    {
+
+                        similarityIndex++;
+                    }
+                    current1 = current1.Next;
+                }
+                current = current.Next;
+
+            }
 
             return similarityIndex;
         }
@@ -38,7 +69,29 @@ namespace Assignment_2
         //return type  : NA
         public void Print()
         {
-            // write your implementation here
+            if (this.head == null)
+            {
+                Console.WriteLine("****************Empty List***************");
+            }
+            else
+            {
+                StockNode current = this.head;
+
+                int counter = 1;
+
+                while (current != null)
+                {
+                    Console.WriteLine("****************Node number: " + counter + "***************");
+                    Console.WriteLine("Symbol: " + current.StockHolding.Symbol);
+                    Console.WriteLine("Name: " + current.StockHolding.Name);
+                    Console.WriteLine("Holdings: " + current.StockHolding.Holdings);
+                    Console.WriteLine("CurrentPrice: " + current.StockHolding.CurrentPrice);
+                    Console.WriteLine("");
+
+                    current = current.Next;
+                    counter++;
+                }
+            }
 
         }
     }

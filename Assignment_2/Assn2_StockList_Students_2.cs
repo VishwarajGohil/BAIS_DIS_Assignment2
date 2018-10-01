@@ -13,8 +13,20 @@ namespace Assignment_2
         public StockList MergeList(StockList listToMerge)
         {
             StockList resultList = new StockList();
+            StockList currentStockList = this;
 
-            // write your implementation here
+            StockNode current = this.head;
+            StockNode nodeToMerge = listToMerge.head;
+
+
+            while (nodeToMerge != null)
+            {
+                currentStockList.AddStock(nodeToMerge.StockHolding);
+
+                nodeToMerge = nodeToMerge.Next;
+            }
+
+            resultList = currentStockList;
 
             return resultList;
         }
